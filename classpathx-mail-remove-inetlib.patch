@@ -1,0 +1,22 @@
+--- ../mail-20050512.orig/build.xml	2005-05-12 14:26:00.000000000 -0400
++++ build.xml	2005-05-12 17:56:59.000000000 -0400
+@@ -64,18 +64,13 @@
+   <!-- Targets -->
+   <target name='preinit'>
+     <available file='${activation.jar}' property='activation.available'/>
+-    <available file='${inetlib.jar}' property='inetlib.available'/>
+   </target>
+ 
+   <target name='activation.jar.unavailable' depends='preinit' unless='activation.available'>
+     <fail message='Can&apos;t find ${activation.jar} - see INSTALL'/>
+   </target>
+ 
+-  <target name='inetlib.jar.unavailable' depends='preinit' unless='inetlib.available'>
+-    <fail message='Can&apos;t find ${inetlib.jar} - see INSTALL'/>
+-  </target>
+-
+-  <target name='init' depends='preinit,activation.jar.unavailable,inetlib.jar.unavailable'>
++  <target name='init' depends='preinit,activation.jar.unavailable'>
+     <echo>WARNING: compilation using Ant is not supported, see the file INSTALL for details</echo>
+     <tstamp/>
+     <mkdir dir='${dst}'/>

@@ -1,0 +1,16 @@
+--- ../mail-20050512.orig/build.xml	2005-05-12 14:26:00.000000000 -0400
++++ build.xml	2005-05-12 14:35:00.000000000 -0400
+@@ -177,6 +180,13 @@
+         <include name='javamail.providers'/>
+         <include name='javamail.address.map'/>
+       </metainf>
++      <include name='org/jpackage/mail/inet/ftp/*.class'/>
++      <include name='org/jpackage/mail/inet/util/*.class'/>
++      <include name='org/jpackage/mail/inet/smtp/*.class'/>
++      <include name='org/jpackage/mail/inet/imap/*.class'/>
++      <include name='org/jpackage/mail/inet/pop3/*.class'/>
++      <include name='org/jpackage/mail/inet/nntp/*.class'/>
++      <include name='org/jpackage/mail/inet/gopher/*.class'/>
+       <include name='gnu/mail/treeutil/*.class'/>
+       <include name='gnu/mail/providers/*.class'/>
+       <include name='gnu/mail/providers/smtp/*.class' unless='disable-smtp'/>

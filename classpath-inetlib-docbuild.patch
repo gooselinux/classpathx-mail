@@ -1,0 +1,12 @@
+--- ../inetlib-20050512.orig/build.xml	2005-05-12 16:33:48.000000000 -0400
++++ build.xml	2005-05-12 16:36:23.000000000 -0400
+@@ -155,8 +155,7 @@
+ 	<target name='doc' depends='init'>
+ 		<mkdir dir='${doc}'/>
+ 		<javadoc destdir='${doc}' use='true' author='true'
+-			windowtitle='GNU inetlib API documentation'
+-			classpathref='provider.classpath'>
++			windowtitle='GNU inetlib API documentation'>
+ 			<doctitle><![CDATA[<h3>GNU inetlib</h3>]]></doctitle>
+ 			<bottom><![CDATA[&copy;]]> Copyright 2003 The Free Software Foundation,
+ 			all rights reserved</bottom>

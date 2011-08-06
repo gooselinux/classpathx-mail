@@ -1,0 +1,12 @@
+--- ../mail-20050512.orig/build.xml	2005-05-12 14:26:00.000000000 -0400
++++ build.xml	2005-05-12 14:29:01.000000000 -0400
+@@ -208,8 +211,7 @@
+   <target name='javadoc' depends='init' description='Build the JavaDoc API documentation'>
+     <mkdir dir='${doc}'/>
+     <javadoc destdir='${doc}' use='true' author='true'
+-      windowtitle='GNU JavaMail API documentation'
+-      classpathref='nntp.classpath'>
++      windowtitle='GNU JavaMail API documentation'>
+       <doctitle><![CDATA[<h3>GNU JavaMail</h3>]]></doctitle>
+       <bottom><![CDATA[&copy;]]> Copyright 2003, 2004
+             The Free Software Foundation, All rights reserved</bottom>
